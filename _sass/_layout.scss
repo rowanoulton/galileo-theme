@@ -1,0 +1,8 @@
+#banner {
+    @include retina-background-image($img-banner, $img-banner-2x, $img-banner-3x);
+    display: block;
+    width: 182px;
+    height: 503px;
+    text-indent: -9999px;
+    margin: 0 auto 50px;
+}

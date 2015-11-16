@@ -3,7 +3,6 @@
 ---
 @charset "utf-8";
 
-// Our variables
 $base-font-family: "adobe-caslon-pro", serif;
 $base-font-size:   18px;
 $base-font-weight: 400;
@@ -11,6 +10,11 @@ $base-line-height: 1.5;
 $text-color:       #222;
 $background-color: #fefefe;
 $content-width:    750px;
+
+// Images
+$img-banner: '{{ site.baseurl }}/img/banner.png';
+$img-banner-2x: '{{ site.baseurl }}/img/banner@2x.png';
+$img-banner-3x: '{{ site.baseurl }}/img/banner@3x.png';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
