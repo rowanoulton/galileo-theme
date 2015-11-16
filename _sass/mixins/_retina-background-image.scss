@@ -1,6 +1,7 @@
 @mixin retina-background-image($img-1x, $img-2x, $img-3x) {
     // Non-retina device
     background-image: url($img-1x);
+    background-size: 100%;
 
     // Retina @2x device
     @media only screen and (-webkit-min-device-pixel-ratio: 1.2), only screen and (min--moz-device-pixel-ratio: 1.2), only screen and (-o-min-device-pixel-ratio: 5/4), only screen and (min-device-pixel-ratio: 1.2), only screen and (min-resolution: 120dpi), only screen and (min-resolution: 1.2dppx) {
