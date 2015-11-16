@@ -1,8 +1,20 @@
 #banner {
     @include retina-background-image($img-banner, $img-banner-2x, $img-banner-3x);
     display: block;
-    width: 182px;
-    height: 503px;
+    width: $banner-width;
+    height: $banner-height;
     text-indent: -9999px;
-    margin: 0 auto 50px;
+    margin: 0 auto $banner-margin;
+    position: relative; /* To ensure the bottom border is positioned correctly */
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: $banner-height;
+        left: $banner-border-offset;
+        content: "";
+        background: #443E40;
+        height: $banner-border-width;
+        width: $banner-width - ($banner-border-offset* 2);
+    }
 }

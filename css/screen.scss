@@ -11,6 +11,13 @@ $text-color:       #222;
 $background-color: #fefefe;
 $content-width:    750px;
 
+// Banner
+$banner-width: 182px;
+$banner-height: 503px;
+$banner-margin: 50px;
+$banner-border-width: 3px;
+$banner-border-offset: 2px;
+
 // Images
 $img-banner: '{{ site.baseurl }}/img/banner.png';
 $img-banner-2x: '{{ site.baseurl }}/img/banner@2x.png';
