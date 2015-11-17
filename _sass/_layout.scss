@@ -18,3 +18,21 @@
         width: $banner-width - ($banner-border-offset* 2);
     }
 }
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+
+    &::after {
+        @include retina-background-image($img-dude, $img-dude-2x, $img-dude-3x);
+        display: block;
+        content: "";
+        width: 65px;
+        height: 158px;
+        margin: 30px auto;
+    }
+
+    p {
+        margin: 0;
+    }
+}

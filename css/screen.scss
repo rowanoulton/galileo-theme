@@ -23,6 +23,9 @@ $banner-border-offset: 2px;
 $img-banner: '{{ site.baseurl }}/img/banner.png';
 $img-banner-2x: '{{ site.baseurl }}/img/banner@2x.png';
 $img-banner-3x: '{{ site.baseurl }}/img/banner@3x.png';
+$img-dude: '{{ site.baseurl }}/img/dude.png';
+$img-dude-2x: '{{ site.baseurl }}/img/dude@2x.png';
+$img-dude-3x: '{{ site.baseurl }}/img/dude@3x.png';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
