@@ -8,6 +8,7 @@ $base-font-size:   18px;
 $base-font-weight: 400;
 $base-line-height: 1.5;
 $text-color:       #222;
+$legal-text-color: #818181;
 $background-color: #fefefe;
 $content-width:    750px;
 
@@ -28,5 +29,6 @@ $img-banner-3x: '{{ site.baseurl }}/img/banner@3x.png';
         "mixins",
         "vendors",
         "base",
-        "layout"
+        "layout",
+        "modules"
 ;
