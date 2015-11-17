@@ -17,7 +17,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
-typekit_uid: kwf5dox
+typekit_kit_id: kwf5dox
 
 # Build settings
 markdown: kramdown
