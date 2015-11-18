@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body>
+    <body class="is-offset">
         {% include header.html %}
         <section role="main">
             {{ content }}
         </section>
         {% include footer.html %}
+        <script type="text/javascript" src="{{ site.baseurl }}/js/travelog.js"></script>
     </body>
 </html>

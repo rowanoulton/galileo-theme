@@ -25,6 +25,10 @@ body {
     text-rendering: optimizeLegibility; /* Beware of performance issues in mobile - see https://css-tricks.com/almanac/properties/t/text-rendering/ */
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
+
+    &.is-offset {
+        margin-top: -195px;
+    }
 }
 
 a {
