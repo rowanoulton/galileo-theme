@@ -28,9 +28,11 @@
 }
 
 .post-image {
-    font-size: 0;
     margin-bottom: 25px;
     margin-top: 30px;
+
+    // Prevent any whitespace positioning issues
+    font-size: 0;
 
     img,
     video{
