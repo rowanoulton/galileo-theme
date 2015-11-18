@@ -8,7 +8,7 @@
 # Site settings
 title: Travelog
 author: Your name
-author_description: A few words about you
+author_description: A few words to describe you & your face
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
