@@ -27,6 +27,9 @@ $img-banner-3x: '{{ site.baseurl }}/img/banner@3x.png';
 $img-dude: '{{ site.baseurl }}/img/dude.png';
 $img-dude-2x: '{{ site.baseurl }}/img/dude@2x.png';
 $img-dude-3x: '{{ site.baseurl }}/img/dude@3x.png';
+$img-location: '{{ site.baseurl }}/img/icon-location.png';
+$img-location-2x: '{{ site.baseurl }}/img/icon-location@2x.png';
+$img-location-3x: '{{ site.baseurl }}/img/icon-location@3x.png';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
