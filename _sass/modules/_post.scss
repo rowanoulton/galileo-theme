@@ -51,6 +51,32 @@
         max-width: 365px;
         margin-right: 20px;
     }
+
+    .post-image-caption {
+        margin-right: 20px;
+    }
+}
+
+.post-image-caption {
+    margin-top: 25px;
+    color: $caption-text-color;
+    font-family: "ltc-bodoni-175", serif;
+    padding: 0 20px;
+
+    // Re-set the font size as parent is set to zero
+    font-size: $base-font-size;
+
+    // Override properties meant for article content paragraphs
+    margin-bottom: 0 !important;
+    text-align: center !important;
+
+    &::after {
+        display: block;
+        content: "";
+        width: 185px;
+        margin: 25px auto 30px;
+        border-bottom: 3px double $border-color;
+    }
 }
 
 .post-footer {
