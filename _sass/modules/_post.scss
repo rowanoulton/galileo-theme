@@ -1,0 +1,85 @@
+.post-title {
+    font-family: 'Libre Baskerville', serif;
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+
+    // Force default text colour [as post-header is wrapped by a link]
+    color: $text-color;
+}
+
+.post-date {
+    display: block;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 23px 0 13px;
+    text-align: center;
+    color: $legal-text-color;
+    margin: 20px 0 25px;
+}
+
+.post-body {
+    p {
+        text-align: justify;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+}
+
+.post-image {
+    font-size: 0;
+    margin-bottom: 25px;
+    margin-top: 30px;
+
+    img,
+    video{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    & + .post-image {
+        margin-top: -5px;
+    }
+}
+
+.post-image--split {
+    margin-right: -20px;
+
+    img {
+        width: calc(50% - 10px);
+        max-width: 365px;
+        margin-right: 20px;
+    }
+}
+
+.post-footer {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+
+    // Child is floated, so use a clearfix on the parent
+    @include clearfix;
+}
+
+.post-footer-location {
+    @include retina-background-image($img-location, $img-location-2x, $img-location-3x);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: transparent;
+    background-size: 44px;
+    min-height: 21px;
+    float: right;
+    padding-right: 55px;
+
+    // The font used (Adobe Caslon Pro) has a peculiar line-height. This
+    // adjusts the position of the text in relation to the icon without
+    // adjusting the line-height property itself
+    margin-top: -9px;
+    padding-top: 9px;
+
+    // Force legal text colour [as it is a link]
+    color: $legal-text-color;
+
+    // However let the normal hover colour apply
+    &:hover { color: #000; }
+}
