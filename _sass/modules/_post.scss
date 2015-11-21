@@ -1,3 +1,12 @@
+.post::after {
+    content: "";
+    width: 596px;
+    height: 42px;
+    display: block;
+    margin: 0 auto 50px;
+    background: url($img-separator) no-repeat center bottom transparent;
+}
+
 .post-title {
     font-family: 'Libre Baskerville', serif;
     display: block;
@@ -82,9 +91,6 @@
 }
 
 .post-footer {
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 20px;
-
     // Child is floated, so use a clearfix on the parent
     @include clearfix;
 }
