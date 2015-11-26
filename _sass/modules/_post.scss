@@ -22,10 +22,21 @@
     display: block;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
-    padding: 23px 0 13px;
     text-align: center;
     color: $legal-text-color;
     margin: 20px 0 25px;
+
+    // Fix typekit line-height with excess top padding
+    padding: 23px 0 13px;
+}
+
+// @todo: replace with typekit-fallback mixin
+/*body*/.wf-inactive,
+/*body*/.wf-loading {
+    .post-date {
+        // Reset a reasonable top padding in absence of abnormally tall typekit font line-height
+        padding-top: 18px;
+    }
 }
 
 .post-body {
@@ -87,6 +98,22 @@
         width: 185px;
         margin: 23px auto 30px;
         border-bottom: 3px double $border-color;
+    }
+}
+
+// @todo: replace with typekit-fallback mixin
+/*body*/.wf-inactive,
+/*body*/.wf-loading {
+    .post-image-caption {
+        // Libre Baskerville is our fallback font, which is much larger, so we need to
+        // drastically reduce the font-size and increase the line-height
+        font-size: 15px;
+        line-height: 1.8 !important;
+
+        &::after {
+            // Reset a reasonable top margin in absence of the abnormally tall typekit font line-height
+            margin-top: 25px;
+        }
     }
 }
 
