@@ -1,4 +1,7 @@
 @import
-    "modules/legal",
-    "modules/post"
+    "modules/legal/rules",
+    "modules/post/rules"
 ;
+
+@include travelog-legal;
+@include travelog-post;
