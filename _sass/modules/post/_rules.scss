@@ -43,6 +43,8 @@
         text-align: center;
         color: $legal-text-color;
         margin: 15px 0 25px;
+        font-variant: small-caps;
+        letter-spacing: 0.06em;
 
         // Fix typekit line-height with excess top padding
         padding: 23px 0 13px;
