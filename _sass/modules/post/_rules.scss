@@ -2,22 +2,37 @@
 @mixin travelog-post {
     .post::after {
         content: "";
-        width: 596px;
+        width: 100%;
+        max-width: 596px;
         height: 42px;
         display: block;
-        margin: 0 auto 50px;
+        margin: 20px auto 50px;
         background: url($img-separator) no-repeat center bottom transparent;
+
+        // The breakpoint here was entirely guessed and tested by eye-balling the results
+        // ie. feel free to choose something more sensible
+        @include min-breakpoint(645px) {
+            margin-top: 5px;
+        }
     }
 
     .post-title {
         font-family: 'Libre Baskerville', serif;
         display: block;
-        font-size: 42px;
         font-weight: 700;
+        font-size: $post-title-min-font-size;
         text-align: center;
 
         // Force default text colour [as post-header is wrapped by a link]
         color: $text-color;
+
+        @include min-breakpoint($post-title-medium-breakpoint) {
+            font-size: $post-title-medium-font-size;
+        }
+
+        @include min-breakpoint($desktop-breakpoint) {
+            font-size: $post-title-max-font-size;
+        }
     }
 
     .post-date {
@@ -68,15 +83,31 @@
     }
 
     .post-image--split {
-        margin-right: -1 * $post-image-split-gutter;
+        @include min-breakpoint($image-splitting-breakpoint) {
+            margin-right: -1 * $post-image-split-gutter;
+        }
 
         img {
-            width: calc(50% - ($post-image-split-gutter / 2));
-            margin-right: $post-image-split-gutter;
+            width: 100%;
+            display: block;
+            margin-bottom: $post-image-split-gutter;
+
+            @include min-breakpoint($image-splitting-breakpoint) {
+                width: $post-image-split-width;
+                margin-right: $post-image-split-gutter;
+                display: initial;
+                margin-bottom: 0;
+            }
+
+            @include min-breakpoint($desktop-breakpoint) {
+                max-width: $post-image-split-max-width;
+            }
         }
 
         .post-image-caption {
-            margin-right: $post-image-split-gutter;
+            @include min-breakpoint($image-splitting-breakpoint) {
+                margin-right: $post-image-split-gutter;
+            }
         }
     }
 
@@ -119,19 +150,25 @@
     }
 
     .post-footer {
+        padding: 10px 0 5px;
+        text-align: center;
+
         // Child is floated, so use a clearfix on the parent
         @include clearfix;
+
+        @include min-breakpoint($image-splitting-breakpoint) {
+            padding: 0;
+        }
     }
 
     .post-footer-location {
         @include retina-background-image($img-location, $img-location-2x, $img-location-3x);
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: left center;
         background-color: transparent;
         background-size: 44px;
         min-height: 21px;
-        float: right;
-        padding-right: 55px;
+        padding-left: 55px;
 
         // The font used (Adobe Caslon Pro) has a peculiar line-height. This
         // adjusts the position of the text in relation to the icon without
@@ -144,5 +181,13 @@
 
         // However let the normal hover colour apply
         &:hover { color: $hover-color; }
+
+        @include min-breakpoint($image-splitting-breakpoint) {
+            // Switch icon from left to right side
+            background-position: right center;
+            padding-right: 55px;
+            padding-left: 0;
+            float: right;
+        }
     }
 }

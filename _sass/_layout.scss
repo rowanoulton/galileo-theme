@@ -39,6 +39,10 @@
 }
 
 section[role="main"] {
-    max-width: $layout-width;
+    width: 90%;
     margin: 0 auto;
+
+    @include min-breakpoint($desktop-breakpoint) {
+        width: $layout-width;
+    }
 }

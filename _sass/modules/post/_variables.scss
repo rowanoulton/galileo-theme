@@ -1,2 +1,13 @@
-$post-image-split-width: 365px;
+$post-title-min-font-size: 24px;
+$post-title-medium-font-size: 5vw;
+$post-title-max-font-size: 42px;
+// To transition smoothly from our middle font-size of 5vw, we
+// must calculate the intersection of our minimum font size and
+// 5 vertical widths, that is, when the browser width is 20 times 24px
+// (note the calculation is done in reverse to remind us that we are using
+// a value of 5%, or 0.05)
+$post-title-medium-breakpoint: $post-title-min-font-size / 0.05;
+
+$post-image-split-max-width: 365px;
 $post-image-split-gutter: 20px;
+$post-image-split-width: calc(50% - #{$post-image-split-gutter});
