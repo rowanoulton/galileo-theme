@@ -22,6 +22,7 @@
         font-weight: 700;
         font-size: $post-title-min-font-size;
         text-align: center;
+        line-height: 1.4;
 
         // Force default text colour [as post-header is wrapped by a link]
         color: $text-color;
@@ -41,7 +42,7 @@
         border-bottom: 1px solid $border-color;
         text-align: center;
         color: $legal-text-color;
-        margin: 20px 0 25px;
+        margin: 15px 0 25px;
 
         // Fix typekit line-height with excess top padding
         padding: 23px 0 13px;
