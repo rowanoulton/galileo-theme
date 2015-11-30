@@ -1,13 +1,19 @@
 @import "modules/post/variables";
 @mixin travelog-post {
     .post::after {
+        @include retina-background-image($img-separator, $img-separator-2x, $img-separator-3x);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-color: transparent;
         content: "";
         width: 100%;
         max-width: 596px;
         height: 42px;
         display: block;
         margin: 20px auto 50px;
-        background: url($img-separator) no-repeat center bottom transparent;
+
+        // Force background size to remain constant and not scale down
+        background-size: 596px !important;
 
         // The breakpoint here was entirely guessed and tested by eye-balling the results
         // ie. feel free to choose something more sensible

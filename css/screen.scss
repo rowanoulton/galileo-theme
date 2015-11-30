@@ -33,6 +33,8 @@ $banner-border-offset: 2px;
 
 // Images
 $img-separator: '{{ site.baseurl }}/img/separator.png';
+$img-separator-2x: '{{ site.baseurl }}/img/separator@2x.png';
+$img-separator-3x: '{{ site.baseurl }}/img/separator@3x.png';
 $img-banner: '{{ site.baseurl }}/img/banner.png';
 $img-banner-2x: '{{ site.baseurl }}/img/banner@2x.png';
 $img-banner-3x: '{{ site.baseurl }}/img/banner@3x.png';
