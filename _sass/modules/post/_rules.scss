@@ -177,14 +177,9 @@
     }
 
     .post-footer {
-        padding: 10px 0 5px;
-        text-align: center;
-
-        // Child is floated, so use a clearfix on the parent
-        @include clearfix;
-
-        @include min-breakpoint($image-splitting-breakpoint) {
-            padding: 0;
+        @include min-breakpoint($desktop-breakpoint) {
+            // Child is floated, so use a clearfix on the parent
+            @include clearfix;
         }
     }
 
