@@ -6,7 +6,7 @@
         <time datetime="{{ include.post.date | date_to_xmlschema }}" class="post-date">{{ include.post.date | date: "%A, %B %-d, %Y" }}</time>
     </header>
     <div class="post-body">
-        {{ include.content }}
+        <a href="https://www.google.com/maps/search/{{ include.post.location }}" target="_blank" class="post-body-location">{{ include.post.location }}</a><span class="post-body-location-divider">—</span>{{ include.content }}
     </div>
     <footer class="post-footer">
         <a href="https://www.google.com/maps/search/{{ include.post.location }}" target="_blank" class="post-footer-location">{{ include.post.location }}</a>

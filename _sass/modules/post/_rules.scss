@@ -73,6 +73,24 @@
         }
     }
 
+    .post-body-location,
+    .post-body-location-divider {
+        float: left;
+    }
+
+    .post-body-location {
+        font-family: "ltc-bodoni-175", serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-right: 5px;
+        line-height: 1.2;
+    }
+
+    .post-body-location-divider {
+        margin-right: 6px;
+        line-height: 1.4;
+    }
+
     .post-image {
         margin-bottom: 25px;
         margin-top: 30px;
