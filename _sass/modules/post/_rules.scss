@@ -73,6 +73,32 @@
         }
     }
 
+    .post-body-location,
+    .post-body-location-divider {
+        float: left;
+    }
+
+    .post-body-location {
+        font-family: "ltc-bodoni-175", serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-right: 5px;
+
+        // A line-height of 1.2 makes our font (Bodoni) align well horizontally with
+        // the paragraph font (Caslon) however we need to ensure that the location
+        // text displays nicely if wrapped across multiple lines. To solve this,
+        // we increase the line-height while offsetting it's position upwards slightly.
+        // This will keep the alignment between Bodoni & Caslon AND wrap nicely.
+        line-height: 1.4;
+        position: relative;
+        top: -2px;
+    }
+
+    .post-body-location-divider {
+        margin-right: 6px;
+        line-height: 1.4;
+    }
+
     .post-image {
         margin-bottom: 25px;
         margin-top: 30px;
@@ -159,44 +185,37 @@
     }
 
     .post-footer {
-        padding: 10px 0 5px;
-        text-align: center;
-
-        // Child is floated, so use a clearfix on the parent
-        @include clearfix;
-
-        @include min-breakpoint($image-splitting-breakpoint) {
-            padding: 0;
+        @include min-breakpoint($desktop-breakpoint) {
+            // Child is floated, so use a clearfix on the parent
+            @include clearfix;
         }
     }
 
     .post-footer-location {
-        @include retina-background-image($img-location, $img-location-2x, $img-location-3x);
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-color: transparent;
-        background-size: 44px;
-        min-height: 21px;
-        padding-left: 55px;
+        display: none;
 
-        // The font used (Adobe Caslon Pro) has a peculiar line-height. This
-        // adjusts the position of the text in relation to the icon without
-        // adjusting the line-height property itself
-        margin-top: -9px;
-        padding-top: 9px;
-
-        // Force legal text colour [as it is a link]
-        color: $legal-text-color;
-
-        // However let the normal hover colour apply
-        &:hover { color: $hover-color; }
-
-        @include min-breakpoint($image-splitting-breakpoint) {
-            // Switch icon from left to right side
+        @include min-breakpoint($desktop-breakpoint) {
+            @include retina-background-image($img-location, $img-location-2x, $img-location-3x);
+            display: block;
+            background-repeat: no-repeat;
             background-position: right center;
+            background-color: transparent;
+            background-size: 44px;
+            min-height: 21px;
             padding-right: 55px;
-            padding-left: 0;
             float: right;
+
+            // The font used (Adobe Caslon Pro) has a peculiar line-height. This
+            // adjusts the position of the text in relation to the icon without
+            // adjusting the line-height property itself
+            margin-top: -9px;
+            padding-top: 9px;
+
+            // Force legal text colour [as it is a link]
+            color: $legal-text-color;
+
+            // However let the normal hover colour apply
+            &:hover { color: $hover-color; }
         }
     }
 }
