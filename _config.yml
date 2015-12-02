@@ -22,7 +22,7 @@ typekit_kit_id: kwf5dox
 # Set to true if you do not want the title text to be visible in the banner
 # This is useful if, for instance, you want to add the title text to the banner image itself
 # (The benefit being that you could use a custom font without having to embed it)
-custom_banner: false
+banner_image_replacement: false
 
 # Build settings
 markdown: kramdown
