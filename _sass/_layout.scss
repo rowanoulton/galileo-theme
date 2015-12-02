@@ -7,16 +7,24 @@
     margin: 0 auto $banner-margin;
     position: relative; /* To ensure the bottom border is positioned correctly */
 
-    h1 {
-        font-family: 'Podkova', serif;
-        font-size: 25px;
-        font-weight: 400;
-        text-align: center;
-        letter-spacing: 0.02em;
-        color: #fefefe;
-        position: absolute;
-        bottom: 19px;
-        width: 100%;
+    &.is-custom {
+        text-indent: -9999px; /* Use the classic image-replacement method to remove title text */
+    }
+
+    &:not(.is-custom) {
+        h1 {
+            // Podkova is included from Google Fonts automatically unless a custom banner is used
+            // See _config.yml for details
+            font-family: 'Podkova', serif;
+            font-size: 25px;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #fefefe;
+            position: absolute;
+            bottom: 19px;
+            width: 100%;
+        }
     }
 
     &::after {
