@@ -4,9 +4,20 @@
     display: block;
     width: $banner-width;
     height: $banner-height;
-    text-indent: -9999px;
     margin: 0 auto $banner-margin;
     position: relative; /* To ensure the bottom border is positioned correctly */
+
+    h1 {
+        font-family: 'Podkova', serif;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #fefefe;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
 
     &::after {
         display: block;
