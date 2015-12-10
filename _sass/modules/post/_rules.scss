@@ -79,7 +79,7 @@
     }
 
     .post-body-location {
-        font-family: "ltc-bodoni-175", serif;
+        font-family: $caption-font-family;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         margin-right: 5px;
@@ -149,7 +149,7 @@
     .post-image-caption {
         margin-top: 25px;
         color: $caption-text-color;
-        font-family: "ltc-bodoni-175", 'Libre Baskerville', serif;
+        font-family: $caption-font-family;
         padding: 0 20px;
 
         // Re-set the font size as parent is set to zero
