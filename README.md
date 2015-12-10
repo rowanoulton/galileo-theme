@@ -7,7 +7,7 @@ Another damned theme for Jekyll.
 
 Landing somewhere between a scholarly publication and an adventurers notebook, the Galileo theme presents your words & photographs in a handsome, agreeable manner.
 
-It is well behaved on both mobile & desktop, and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
+It is well behaved on both mobile & desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
 
 ### In the wild
 
