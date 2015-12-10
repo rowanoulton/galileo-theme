@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body class="is-offset">
+    <body class="is-offset {% unless site.typekit_kit_id %}wf-inactive{% endunless %}">
         {% include header.html %}
         <section role="main">
             {{ content }}
