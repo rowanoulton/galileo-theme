@@ -1,25 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "The Galileo Theme"
 date:   2015-11-15 13:05:14 +0100
-categories: jekyll update
+categories: jekyll theme
+location: Florence, Italy
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Landing somewhere between a scholarly publication and an adventurers notebook, the Galileo theme presents your words & photographs in a handsome, agreeable manner. It is well behaved on both mobile & desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
 
-Jekyll also offers powerful support for code snippets:
+Suitable for shortform, longform and probably even waveform. It is purpose-built to accomodate photographic content wonderfully and lends itself well to journaling your sojourn.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+<div class="post-image post-image--split">
+    <img src="http://placehold.it/365x486/8e8387/ffffff" alt="The first in an example of split-imagery" />
+    <img src="http://placehold.it/365x486/8e8387/ffffff" alt="The second in an example of split-imagery" />
+</div>
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+<div class="post-image">
+    <img src="http://placehold.it/750x563/8e8387/ffffff" alt="A full-size image example" />
+    <p class="post-image-caption">Here we demonstrate a caption. This'll adapt to any length of text.</p>
+</div>
