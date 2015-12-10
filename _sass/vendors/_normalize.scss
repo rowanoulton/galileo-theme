@@ -447,3 +447,10 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+/**
+ * Fix line-height for code blocks
+ */
+pre {
+    line-height: 1.4;
+}
