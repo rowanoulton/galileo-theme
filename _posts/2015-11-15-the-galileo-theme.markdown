@@ -11,8 +11,8 @@ Landing somewhere between a scholarly publication and an adventurers notebook, t
 Suitable for shortform, longform, and probably even waveform. It is purpose-built to accomodate photographic content wonderfully and lends itself well to journaling your sojourn.
 
 <div class="post-image post-image--split">
-    <img src="http://placehold.it/365x486/8e8387/ffffff" alt="The first in an example of split-imagery" />
-    <img src="http://placehold.it/365x486/8e8387/ffffff" alt="The second in an example of split-imagery" />
+    <img src="http://placehold.it/365x270/8e8387/ffffff" alt="The first in an example of split-imagery" />
+    <img src="http://placehold.it/365x270/8e8387/ffffff" alt="The second in an example of split-imagery" />
 </div>
 
 <div class="post-image">
