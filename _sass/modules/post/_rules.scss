@@ -1,5 +1,5 @@
 @import "modules/post/variables";
-@mixin travelog-post {
+@mixin galileo-post {
     .post::after {
         @include retina-background-image($img-separator);
         background-repeat: no-repeat;
