@@ -35,18 +35,11 @@ $banner-border-width: 3px;
 $banner-border-offset: 2px;
 
 // Images
-$img-separator: '{{ site.baseurl }}/img/separator.png';
-$img-separator-2x: '{{ site.baseurl }}/img/separator@2x.png';
-$img-separator-3x: '{{ site.baseurl }}/img/separator@3x.png';
-$img-banner: '{{ site.baseurl }}/img/banner.png';
-$img-banner-2x: '{{ site.baseurl }}/img/banner@2x.png';
-$img-banner-3x: '{{ site.baseurl }}/img/banner@3x.png';
-$img-dude: '{{ site.baseurl }}/img/dude.png';
-$img-dude-2x: '{{ site.baseurl }}/img/dude@2x.png';
-$img-dude-3x: '{{ site.baseurl }}/img/dude@3x.png';
-$img-location: '{{ site.baseurl }}/img/icon-location.png';
-$img-location-2x: '{{ site.baseurl }}/img/icon-location@2x.png';
-$img-location-3x: '{{ site.baseurl }}/img/icon-location@3x.png';
+// Note that extensions are omitted for use in retina-background-image mixin
+$img-separator: '{{ site.baseurl }}/img/separator';
+$img-banner: '{{ site.baseurl }}/img/banner';
+$img-dude: '{{ site.baseurl }}/img/dude';
+$img-location: '{{ site.baseurl }}/img/icon-location';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

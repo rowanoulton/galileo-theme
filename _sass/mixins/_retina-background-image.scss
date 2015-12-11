@@ -1,15 +1,19 @@
-@mixin retina-background-image($img-1x, $img-2x, $img-3x) {
+// Assumes that image filenames follow the pattern:
+// - 1x: name.png
+// - 2x: name@2x.png
+// - 3x: name@3x.png
+@mixin retina-background-image($img-path, $ext: '.png') {
     // Non-retina device
-    background-image: url($img-1x);
+    background-image: url($img-path + $ext);
     background-size: 100%;
 
     // Retina @2x device
     @media only screen and (-webkit-min-device-pixel-ratio: 1.2), only screen and (min--moz-device-pixel-ratio: 1.2), only screen and (-o-min-device-pixel-ratio: 5/4), only screen and (min-device-pixel-ratio: 1.2), only screen and (min-resolution: 120dpi), only screen and (min-resolution: 1.2dppx) {
-        background-image: url($img-2x);
+        background-image: url($img-path + '@2x' + $ext);
     }
 
     // Retina @3x device
     @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) { 
-        background-image: url($img-3x);
+        background-image: url($img-path + '@3x' + $ext);
     }
 }

@@ -1,5 +1,5 @@
 #banner {
-    @include retina-background-image($img-banner, $img-banner-2x, $img-banner-3x);
+    @include retina-background-image($img-banner);
     outline: none;
     display: block;
     width: $banner-width;
@@ -38,7 +38,7 @@
     text-align: center;
 
     &::after {
-        @include retina-background-image($img-dude, $img-dude-2x, $img-dude-3x);
+        @include retina-background-image($img-dude);
         display: block;
         content: "";
         width: 65px;

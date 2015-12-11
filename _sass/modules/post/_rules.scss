@@ -1,7 +1,7 @@
 @import "modules/post/variables";
 @mixin travelog-post {
     .post::after {
-        @include retina-background-image($img-separator, $img-separator-2x, $img-separator-3x);
+        @include retina-background-image($img-separator);
         background-repeat: no-repeat;
         background-position: center bottom;
         background-color: transparent;
@@ -190,7 +190,7 @@
         display: none;
 
         @include min-breakpoint($desktop-breakpoint) {
-            @include retina-background-image($img-location, $img-location-2x, $img-location-3x);
+            @include retina-background-image($img-location);
             display: block;
             background-repeat: no-repeat;
             background-position: right center;
