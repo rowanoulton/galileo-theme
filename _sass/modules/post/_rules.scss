@@ -56,9 +56,7 @@
         padding: 23px 0 13px;
     }
 
-    // @todo: replace with typekit-fallback mixin
-    /*body*/.wf-inactive,
-    /*body*/.wf-loading {
+    @include typekit-fallback {
         .post-date {
             // Reset a reasonable top padding in absence of abnormally tall typekit font line-height
             padding-top: 18px;
@@ -168,12 +166,9 @@
         }
     }
 
-    // @todo: replace with typekit-fallback mixin
-    /*body*/.wf-inactive,
-    /*body*/.wf-loading {
+    @include typekit-fallback {
         .post-image-caption {
-            // Libre Baskerville is our fallback font, which is much larger, so we need to
-            // drastically reduce the font-size and increase the line-height
+            // Our fallback font is much larger, so we need to reduce the font-size and increase the line-height
             font-size: 15px;
             line-height: 1.8 !important;
 
