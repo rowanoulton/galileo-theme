@@ -7,24 +7,18 @@
     margin: 0 auto $banner-margin;
     position: relative; /* To ensure the bottom border is positioned correctly */
 
-    &.is-custom {
-        text-indent: -9999px; /* Use the classic image-replacement method to remove title text */
-    }
-
-    &:not(.is-custom) {
-        h1 {
-            // Font is included from Google Fonts automatically unless a custom banner is used
-            // See _config.yml for details
-            font-family: 'Sanchez', serif;
-            font-size: 24px;
-            font-weight: 400;
-            text-align: center;
-            letter-spacing: 0.03em;
-            color: #fefefe;
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-        }
+    h1 {
+        // Font is included from Google Fonts automatically unless a custom banner is used
+        // See _config.yml for details
+        font-family: $banner-font-family;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #fefefe;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
     }
 
     &::after {
