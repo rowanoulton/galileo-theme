@@ -23,7 +23,7 @@
     }
 
     .post-title {
-        font-family: 'Libre Baskerville', serif;
+        font-family: $title-font-family;
         display: block;
         font-weight: 700;
         font-size: $post-title-min-font-size;
