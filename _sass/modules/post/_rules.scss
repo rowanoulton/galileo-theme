@@ -85,7 +85,7 @@
         // A line-height of 1.2 makes our font (Bodoni) align well horizontally with
         // the paragraph font (Caslon) however we need to ensure that the location
         // text displays nicely if wrapped across multiple lines. To solve this,
-        // we increase the line-height while offsetting it's position upwards slightly.
+        // we increase the line-height while offsetting its position upwards slightly.
         // This will keep the alignment between Bodoni & Caslon AND wrap nicely.
         line-height: 1.4;
         position: relative;
