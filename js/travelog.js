@@ -1,3 +1,5 @@
+'use strict'
+
 var secretRevealed = false
 var doSecretReveal
 var resetSecretReveal
