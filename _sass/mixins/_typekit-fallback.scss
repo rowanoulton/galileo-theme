@@ -1,0 +1,8 @@
+@mixin typekit-fallback {
+    @at-root {
+        .wf-inactive,
+        .wf-loading {
+            @content;
+        }
+    }
+}
