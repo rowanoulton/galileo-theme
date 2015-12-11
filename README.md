@@ -3,7 +3,7 @@ Galileo Theme
 
 Another damned theme for Jekyll.
 
-![The Galileo Theme](https://cloud.githubusercontent.com/assets/185649/11735640/9200fee4-9fe9-11e5-88d0-45cb9d745306.png)
+![The Galileo Theme](https://cloud.githubusercontent.com/assets/185649/11735661/edc57a0c-9fe9-11e5-9b07-77ae99141ae2.png)
 
 Landing somewhere between a scholarly publication and an adventurers notebook, the Galileo theme presents your words & photographs in a handsome, agreeable manner.
 
