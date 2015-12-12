@@ -1,0 +1,121 @@
+@import "modules/pagination/variables";
+@mixin galileo-pagination {
+    .pagination {
+        @include clearfix;
+        margin: -10px auto 0;
+        display: block;
+        border-top: 1px solid $pagination-border-color;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            margin: -25px auto 0;
+            display: flex;
+            border-top: 0;
+        }
+    }
+
+    .pagination-item {
+        line-height: 21px;
+
+        &:first-of-type {
+            a { border-right: 1px solid $pagination-border-color; }
+        }
+
+        &:last-of-type {
+            a { border-left: 1px solid $pagination-border-color; }
+        }
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            // To ensure the top margin begins from the outer bounds of the contained pagination link
+            line-height: 38px;
+
+            &:first-of-type {
+                a { border-right: 0; }
+            }
+
+            &:last-of-type {
+                a { border-left: 0; }
+            }
+        }
+    }
+
+    .pagination-link {
+        padding: 18px 8px 12px;
+        min-width: 35px;
+        border-bottom: 1px solid $pagination-border-color;
+        color: $legal-color;
+        letter-spacing: 0.02em;
+        clear: both;
+        display: block;
+        outline: none;
+
+        &:hover {
+            background: #eee;
+            border-color: $hover-color;
+            color: $hover-color;
+        }
+
+        &[disabled] {
+            pointer-events: none;
+            color: lighten($legal-color, 30%);
+        }
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            &:hover {
+                background: transparent;
+            }
+        }
+
+        @include min-breakpoint($pagination-widening-breakpoint) {
+            padding: 15px;
+        }
+    }
+
+    .pagination-link--selected {
+        background: #eee;
+        font-weight: bold;
+        border-color: $hover-color;
+        color: $hover-color;
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            background: transparent;
+        }
+    }
+
+    .pagination-link--non-numeric {
+        clear: none;
+        width: 50%;
+        float: left;
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            float: none;
+            width: initial;
+        }
+    }
+
+    .pagination-link-arrow {
+        position: relative;
+    }
+
+    .pagination-link-arrow--leftward {
+        // Offset the arrow every so slightly to sit well next to the text
+        top: 1px;
+        margin-left: -15px;
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            margin-left: 0;
+        }
+    }
+
+    .pagination-link-arrow--rightward {
+        // Weirdly enough, arrows pointing right need a little more offset
+        top: 2px;
+        margin-right: -15px;
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            margin-right: 0;
+        }
+    }
+}
