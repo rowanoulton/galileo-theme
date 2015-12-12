@@ -20,4 +20,13 @@ twitter_username: jekyllrb
 typekit_kit_id: kwf5dox
 
 # Build settings
+gems: [jekyll-paginate]
 markdown: kramdown
+permalink: pretty
+
+# Pagination
+paginate: 5
+
+# Sass
+sass:
+    style: :compressed
