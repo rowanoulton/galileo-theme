@@ -66,7 +66,7 @@
     .post-body {
         p {
             text-align: justify;
-            line-height: 1.6;
+            line-height: $post-line-height;
             margin-bottom: 25px;
         }
     }
@@ -148,6 +148,7 @@
         margin-top: 25px;
         color: $caption-text-color;
         font-family: $caption-font-family;
+        line-height: $post-image-caption-line-height;
         padding: 0 20px;
 
         // Re-set the font size as parent is set to zero

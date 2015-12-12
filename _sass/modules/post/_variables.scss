@@ -1,3 +1,5 @@
+$post-line-height: 1.6;
+
 $post-title-min-font-size: 24px;
 $post-title-medium-font-size: 5vw;
 $post-title-max-font-size: 42px;
@@ -11,3 +13,4 @@ $post-title-medium-breakpoint: $post-title-min-font-size / 0.05;
 $post-image-split-max-width: 365px;
 $post-image-split-gutter: 20px;
 $post-image-split-width: calc(50% - #{$post-image-split-gutter});
+$post-image-caption-line-height: $post-line-height;
