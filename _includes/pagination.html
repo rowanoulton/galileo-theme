@@ -1,0 +1,91 @@
+<!-- Paginator Links -->
+<!-- Adopted from @shadowens brilliant solution: https://github.com/Shadowen/jekyll-paginator-links -->
+<ul class="pagination">
+    {% if include.maxPages %}
+        {% assign maxPages = include.maxPages %}
+    {% else %}
+        <!-- maxPages attribute not passed in Liquid template, defaulting to 5 -->
+        {% assign maxPages = 5 %}
+    {% endif %}
+
+    {% assign halfPages = maxPages | divided_by: 2 %}
+    {% assign right-margin = paginator.total_pages | minus: paginator.page %}
+    {% if paginator.page <= halfPages %}
+        <!-- Align from the left -->
+        <!-- Absurdity required to calculate minimum -->
+        {% assign start = 1 %}
+        {% if paginator.total_pages > maxPages %}
+            {% assign end = maxPages %}
+        {% else %}
+            {% assign end = paginator.total_pages %}
+        {% endif %}
+    {% elsif right-margin <= halfPages %}
+        <!-- Align from the right -->
+        {% assign start = paginator.total_pages | minus: maxPages | plus: 1 | append: ',' | append: 1 | split: ',' | sort | last | plus: 0 %}
+        {% assign end = paginator.total_pages %}
+    {% else %}
+        <!-- Align from the center -->
+        <!-- Absurdity required to calculate maximum -->
+        {% assign position-less-half = paginator.page | minus: halfPages %}
+        {% if position-less-half < 1 %}
+            {% assign start = 1 %}
+        {% else %}
+            {% assign start = position-less-half %}
+        {% endif %}
+
+        <!-- Absurdity required to calcuate minimum -->
+        {% assign position-plus-half = paginator.page | plus: halfPages %}
+        {% if position-plus-half > paginator.total_pages %}
+            {% assign end = paginator.total_pages %}
+        {% else %}
+            {% assign end = position-plus-half %}
+        {% endif %}
+    {% endif %}
+
+    <!-- First page -->
+    <li class="pagination-item">
+        <a class="pagination-link pagination-link--non-numeric" {% if paginator.page == 1 %}disabled="disabled"{% endif %} href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}"><span class="pagination-link-arrow pagination-link-arrow--leftward">&larr;</span> First page</a>
+    </li>
+
+    <!-- Previous page -->
+    <li class="pagination-item">
+        <a class="pagination-link pagination-link--non-numeric" {% if paginator.previous_page == nil %}disabled="disabled"{% endif %} href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="pagination-link-arrow pagination-link-arrow--leftward">&larr;</span> Prev</a>
+    </li>
+
+    <!-- Start ellipsis -->
+    {% if start > 1 %}
+        <li class="pagination-item">
+            <span class="pagination-ellipsis">&#8230;</span>
+        </li>
+    {% endif %}
+
+    <!-- Page numbers -->
+    {% for num  in (start..end) %}
+        <li class="pagination-item">
+            {% if num == paginator.page %}
+            <a class="pagination-link pagination-link--selected" href="#"><span class="pagination-link-help">Page&nbsp;</span>{{ num }}</a>
+            {% elsif num == 1 %}
+                <a class="pagination-link" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}"><span class="pagination-link-help">Page&nbsp;</span>{{ num }}</a>
+            {% else %}
+                <a class="pagination-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', num }}"><span class="pagination-link-help">Page&nbsp;</span>{{ num }}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+
+    <!-- End ellipsis -->
+    {% if end < paginator.total_pages %}
+        <li class="pagination-item">
+            <span class="pagination-ellipsis">&#8230;</span>
+        </li>
+    {% endif %}
+
+    <!-- Next page -->
+    <li class="pagination-item">
+        <a class="pagination-link pagination-link--non-numeric" {% if paginator.next_page == nil %}disabled="disabled"{% endif %} href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next <span class="pagination-link-arrow pagination-link-arrow--rightward">&rarr;</span></a>
+    </li>
+
+    <!-- Last page -->
+    <li class="pagination-item">
+        <a class="pagination-link pagination-link--non-numeric" {% if paginator.page == paginator.total_pages %}disabled="disabled"{% endif %} href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">Last page <span class="pagination-link-arrow pagination-link-arrow--rightward">&rarr;</span></a>
+    </li>
+</ul>

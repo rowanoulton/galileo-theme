@@ -41,7 +41,8 @@
         }
     }
 
-    .pagination-link {
+    .pagination-link,
+    .pagination-ellipsis {
         padding: 18px 8px 12px;
         min-width: 35px;
         border-bottom: 1px solid $pagination-border-color;
@@ -69,7 +70,7 @@
         }
 
         @include min-breakpoint($pagination-widening-breakpoint) {
-            padding: 15px;
+            padding: 13px;
         }
     }
 
@@ -117,5 +118,18 @@
         @include min-breakpoint($pagination-splitting-breakpoint) {
             margin-right: 0;
         }
+    }
+
+    .pagination-link-help {
+        display: inline;
+
+        @include min-breakpoint($pagination-splitting-breakpoint) {
+            display: none;
+        }
+    }
+
+    .pagination-ellipsis {
+        // Prevent hover effects
+        pointer-events: none;
     }
 }
