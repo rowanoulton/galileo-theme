@@ -11,7 +11,7 @@ It is well behaved on both mobile & desktop and radically minimal in its footpri
 
 ### In the wild
 
-I'm so damned fond of this theme that I use it on [my own blog](http://travelog.io/).
+Demo [here](http://travelog.io/galileo-theme/). I'm so damned fond of this theme that I also use it on [my own blog](http://travelog.io/).
 
 ### Installation
 
