@@ -5,7 +5,7 @@
     display: block;
     width: $banner-width;
     height: $banner-height;
-    margin: 0 auto $banner-margin;
+    margin: 0 auto 35px;
     position: relative; /* To ensure the bottom border is positioned correctly */
 
     h1 {
@@ -31,6 +31,10 @@
         background: #443E40;
         height: $banner-border-width;
         width: $banner-width - ($banner-border-offset* 2);
+    }
+
+    @include min-breakpoint($image-splitting-breakpoint) {
+        margin-bottom: $banner-margin;
     }
 }
 
