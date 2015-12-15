@@ -8,6 +8,7 @@
 # Site settings
 title: Travelog
 author: Your name
+author_link: https://whatever.you/like
 author_description: A few words to describe you & your face
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"

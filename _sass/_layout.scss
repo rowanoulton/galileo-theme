@@ -46,6 +46,16 @@
         margin: 20px auto 50px;
     }
 
+    a {
+        // Overwrite default link color
+        color: #222;
+
+        &:hover {
+            // ... but allow the hover color to work as normal
+            color: $hover-color;
+        }
+    }
+
     p {
         margin: 0 0 9px;
         line-height: 1.3;
