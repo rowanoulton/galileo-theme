@@ -18,6 +18,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+# Picturefill
+# A responsive image polyfill: http://scottjehl.github.io/picturefill/
+picturefill: false
+
 # Typography
 # To use, publish a kit and enter the ID here. If you do not wish to use Typekit,
 # leave this ID blank
