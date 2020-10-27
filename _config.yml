@@ -18,6 +18,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+# Set to true if you want a preview of each post instead of the complete post 
+# in the home page
+preview_posts: false
+
 # Picturefill
 # A responsive image polyfill: http://scottjehl.github.io/picturefill/
 picturefill: false
