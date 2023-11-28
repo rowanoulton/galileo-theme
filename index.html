@@ -4,7 +4,11 @@ layout: default
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  {% include post.html post=post content=post.content %}
+    {% if {{site.preview_posts}} %}
+        {% include post_preview.html post=post content=post.content %}
+    {% else %}
+        {% include post.html post=post content=post.content %}
+    {% endif %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}

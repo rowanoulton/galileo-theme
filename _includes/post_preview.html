@@ -1,0 +1,15 @@
+<article class="post">
+    <header>
+        <a href="{{ include.post.url | prepend: site.baseurl }}">
+            <h1 class="post-title">{{ include.post.title }}</h1>
+        </a>
+        <time datetime="{{ include.post.date | date_to_xmlschema }}" class="post-date">{{ include.post.date | date: "%A, %B %-d, %Y" }}</time>
+    </header>
+    <div class="post-body">
+        {{ include.content | strip_html | truncatewords:75}}
+        <a class="link" href="{{ include.post.url }}">Read more...</a><br><br>
+    </div>
+    <footer class="post-footer">
+        
+    </footer>
+</article>
